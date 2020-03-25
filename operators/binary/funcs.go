@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"reflect"
 
-	"github.com/taiyang-li/automi/
+	"github.com/taiyang-li/automi/api"
 )
 
 // ReduceFunc returns a binary function which takes a user-defined accumulator
