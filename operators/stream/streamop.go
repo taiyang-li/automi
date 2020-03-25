@@ -5,10 +5,10 @@ import (
 	"fmt"
 	"reflect"
 
-	"github.com/vladimirvivien/automi/api"
-	autoctx "github.com/vladimirvivien/automi/api/context"
-	"github.com/vladimirvivien/automi/api/tuple"
-	"github.com/vladimirvivien/automi/util"
+	"github.com/taiyang-li/automi/
+	autoctx "github.com/taiyang-li/automi/context"
+	"github.com/taiyang-li/automi/tuple"
+	"github.com/taiyang-li/automi/"
 )
 
 // StreamOperator is an operator takes streamed items of type

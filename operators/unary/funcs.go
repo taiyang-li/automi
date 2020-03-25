@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"reflect"
 
-	"github.com/vladimirvivien/automi/api"
+	"github.com/taiyang-li/automi/
 )
 
 type unaryFuncForm byte

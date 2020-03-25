@@ -8,8 +8,8 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/vladimirvivien/automi/collectors"
-	"github.com/vladimirvivien/automi/stream"
+	"github.com/taiyang-li/automi/collectors"
+	"github.com/taiyang-li/automi/stream"
 )
 
 // Uses filepath.Walk to emit visited paths from root

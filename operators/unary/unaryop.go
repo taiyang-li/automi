@@ -5,9 +5,9 @@ import (
 	"fmt"
 	"sync"
 
-	"github.com/vladimirvivien/automi/api"
-	autoctx "github.com/vladimirvivien/automi/api/context"
-	"github.com/vladimirvivien/automi/util"
+	"github.com/taiyang-li/automi/api"
+	autoctx "github.com/taiyang-li/automi/api/context"
+	"github.com/taiyang-li/automi/util"
 )
 
 type packed struct {
@@ -80,7 +80,15 @@ func (o *UnaryOperator) Exec(ctx context.Context) (err error) {
 			close(o.output)
 		}()
 
-		o.doOp(ctx)
+		wg := sync.WaitGroup{}
+		for i := 0; i < o.concurrency; i++ {
+			wg.Add(1)
+			go func() {
+				defer wg.Done()
+				o.doOp(ctx)
+			}()
+		}
+		wg.Wait()
 	}()
 	return nil
 }

@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/vladimirvivien/automi/collectors"
-	"github.com/vladimirvivien/automi/stream"
+	"github.com/taiyang-li/automi/am"
+	"github.com/taiyang-li/automi/ectors"
 )
 
 func main() {

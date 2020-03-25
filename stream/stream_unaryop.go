@@ -1,8 +1,8 @@
 package stream
 
 import (
-	"github.com/vladimirvivien/automi/api"
-	"github.com/vladimirvivien/automi/operators/unary"
+	"github.com/taiyang-li/automi/api"
+	"github.com/taiyang-li/automi/operators/unary"
 )
 
 // Transform is the base method used to apply transfomrmative
@@ -22,7 +22,7 @@ func (s *Stream) Transform(op api.UnOperation) *Stream {
 //
 // See Also
 //
-//   "github.com/vladimirvivien/automi/operators/unary"#ProcessFunc
+//   "github.com/taiyang-li/automi/operators/unary"#ProcessFunc
 func (s *Stream) Process(f interface{}) *Stream {
 	op, err := unary.ProcessFunc(f)
 	if err != nil {

@@ -5,8 +5,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/vladimirvivien/automi/collectors"
-	"github.com/vladimirvivien/automi/emitters"
+	"github.com/taiyang-li/automi/collectors"
+	"github.com/taiyang-li/automi/emitters"
 )
 
 func TestStream_SliceSource(t *testing.T) {

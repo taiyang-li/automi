@@ -7,9 +7,9 @@ import (
 	"fmt"
 	"io"
 
-	"github.com/vladimirvivien/automi/api"
-	autoctx "github.com/vladimirvivien/automi/api/context"
-	"github.com/vladimirvivien/automi/util"
+	"github.com/taiyang-li/automi/api"
+	autoctx "github.com/taiyang-li/automi/api/context"
+	"github.com/taiyang-li/automi/util"
 )
 
 // ScannerEmitter takes an io.Reader as its source and emits

@@ -3,9 +3,9 @@ package stream
 import (
 	"context"
 
-	"github.com/vladimirvivien/automi/api"
-	autoctx "github.com/vladimirvivien/automi/api/context"
-	"github.com/vladimirvivien/automi/util"
+	"github.com/taiyang-li/automi/api"
+	autoctx "github.com/taiyang-li/automi/api/context"
+	"github.com/taiyang-li/automi/util"
 )
 
 // Drain is a generic sink that terminates streamed data

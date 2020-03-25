@@ -7,7 +7,7 @@ import (
 	"os"
 	"strings"
 
-	"github.com/vladimirvivien/automi/stream"
+	"github.com/taiyang-li/automi/stream"
 )
 
 func main() {

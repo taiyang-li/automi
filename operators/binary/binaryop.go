@@ -4,9 +4,9 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/vladimirvivien/automi/api"
-	autoctx "github.com/vladimirvivien/automi/api/context"
-	"github.com/vladimirvivien/automi/util"
+	"github.com/taiyang-li/automi/
+	autoctx "github.com/taiyang-li/automi/context"
+	"github.com/taiyang-li/automi/"
 )
 
 // BinaryOperator represents an operator that knows how to run a

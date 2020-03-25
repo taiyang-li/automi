@@ -10,13 +10,11 @@ import (
 	"os"
 	"time"
 
-	"github.com/vladimirvivien/automi/collectors"
-
-	"github.com/vladimirvivien/automi/stream"
-
 	"google.golang.org/grpc"
 
-	pb "github.com/vladimirvivien/automi/examples/grpc/protobuf"
+	"github.com/taiyang-li/automi/collectors"
+	pb "github.com/taiyang-li/automi/examples/grpc/protobuf"
+	"github.com/taiyang-li/automi/stream"
 )
 
 const (

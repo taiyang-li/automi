@@ -8,7 +8,7 @@ import (
 
 	"google.golang.org/grpc"
 
-	pb "github.com/vladimirvivien/automi/examples/grpc/protobuf"
+	pb "github.com/taiyang-li/automi/examples/grpc/protobuf"
 )
 
 type timeServer struct{}

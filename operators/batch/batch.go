@@ -5,9 +5,9 @@ import (
 	"fmt"
 	"reflect"
 
-	"github.com/vladimirvivien/automi/api"
-	autoctx "github.com/vladimirvivien/automi/api/context"
-	"github.com/vladimirvivien/automi/util"
+	"github.com/taiyang-li/automi/
+	autoctx "github.com/taiyang-li/automi/context"
+	"github.com/taiyang-li/automi/"
 )
 
 // BatchOperator is an executor that batches incoming streamed items based

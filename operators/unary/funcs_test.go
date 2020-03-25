@@ -6,7 +6,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/vladimirvivien/automi/api"
+	"github.com/taiyang-li/automi/
 )
 
 type unaryFuncTestCase struct {

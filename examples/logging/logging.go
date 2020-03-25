@@ -10,9 +10,9 @@ import (
 	"os"
 	"path/filepath"
 
-	autoctx "github.com/vladimirvivien/automi/api/context"
-	"github.com/vladimirvivien/automi/collectors"
-	"github.com/vladimirvivien/automi/stream"
+	"github.com/taiyang-li/automi/collectors"
+	autoctx "github.com/taiyang-li/automi/context"
+	"github.com/taiyang-li/automi/stream"
 )
 
 // Demostrates stream runtime logging. Uses the examples/md5 as basis.

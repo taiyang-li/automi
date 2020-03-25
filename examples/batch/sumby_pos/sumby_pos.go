@@ -4,9 +4,9 @@ import (
 	"fmt"
 	"strconv"
 
-	"github.com/vladimirvivien/automi/collectors"
-	"github.com/vladimirvivien/automi/emitters"
-	"github.com/vladimirvivien/automi/stream"
+	"github.com/taiyang-li/automi/collectors"
+	"github.com/taiyang-li/automi/emitters"
+	"github.com/taiyang-li/automi/stream"
 )
 
 func main() {

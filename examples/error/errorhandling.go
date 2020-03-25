@@ -11,11 +11,11 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/vladimirvivien/automi/api"
+	"github.com/taiyang-li/automi/api"
 
-	autoctx "github.com/vladimirvivien/automi/api/context"
-	"github.com/vladimirvivien/automi/collectors"
-	"github.com/vladimirvivien/automi/stream"
+	autoctx "github.com/taiyang-li/automi/api/context"
+	"github.com/taiyang-li/automi/collectors"
+	"github.com/taiyang-li/automi/stream"
 )
 
 // Demostrates stream runtime logging. Uses the examples/md5 as basis.

@@ -5,8 +5,8 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/vladimirvivien/automi/collectors"
-	"github.com/vladimirvivien/automi/stream"
+	"github.com/taiyang-li/automi/collectors"
+	"github.com/taiyang-li/automi/stream"
 )
 
 func main() {

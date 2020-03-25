@@ -7,12 +7,12 @@ import (
 	"os"
 	"reflect"
 
-	"github.com/vladimirvivien/automi/api"
-	autoctx "github.com/vladimirvivien/automi/api/context"
-	"github.com/vladimirvivien/automi/collectors"
-	"github.com/vladimirvivien/automi/emitters"
-	streamop "github.com/vladimirvivien/automi/operators/stream"
-	"github.com/vladimirvivien/automi/util"
+	"github.com/taiyang-li/automi/api"
+	autoctx "github.com/taiyang-li/automi/api/context"
+	"github.com/taiyang-li/automi/collectors"
+	"github.com/taiyang-li/automi/emitters"
+	streamop "github.com/taiyang-li/automi/operators/stream"
+	"github.com/taiyang-li/automi/util"
 )
 
 // Stream represents a stream unto  which executor nodes can be

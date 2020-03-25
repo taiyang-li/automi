@@ -6,7 +6,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/vladimirvivien/automi/testutil"
+	"github.com/taiyang-li/automi/testutil"
 )
 
 func TestStreamOp_New(t *testing.T) {
