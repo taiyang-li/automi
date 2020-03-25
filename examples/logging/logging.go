@@ -10,8 +10,8 @@ import (
 	"os"
 	"path/filepath"
 
+	autoctx "github.com/taiyang-li/automi/api/context"
 	"github.com/taiyang-li/automi/collectors"
-	autoctx "github.com/taiyang-li/automi/context"
 	"github.com/taiyang-li/automi/stream"
 )
 

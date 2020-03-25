@@ -6,7 +6,7 @@ import (
 	"reflect"
 
 	"github.com/taiyang-li/automi/
-	autoctx "github.com/taiyang-li/automi/context"
+	autoctx "github.com/taiyang-li/automi/api/context"
 	"github.com/taiyang-li/automi/tuple"
 	"github.com/taiyang-li/automi/"
 )
