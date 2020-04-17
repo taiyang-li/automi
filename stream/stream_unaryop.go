@@ -11,10 +11,13 @@ import (
 func (s *Stream) Transform(op api.UnOperation) *Stream {
 	operator := unary.New()
 	operator.SetOperation(op)
+	operator.SetConcurrency(s.concurrency)
+	operator.SetBufferSize(s.bufferSize)
 	s.ops = append(s.ops, operator)
 	return s
 }
 
+/*
 func (s *Stream) TransformWithConcurrency(op api.UnOperation, concurrency int) *Stream {
 	operator := unary.New()
 	operator.SetOperation(op)
@@ -22,6 +25,7 @@ func (s *Stream) TransformWithConcurrency(op api.UnOperation, concurrency int) *
 	s.ops = append(s.ops, operator)
 	return s
 }
+*/
 
 // Process applies the user-defined function for general processing of incoming
 // streamed elements.  The user-defined function must be of type:
@@ -63,6 +67,7 @@ func (s *Stream) Map(f interface{}) *Stream {
 	return s.Transform(op)
 }
 
+/*
 func (s *Stream) MapWithConcurrency(f interface{}, concurrency int) *Stream {
 	op, err := unary.MapFunc(f)
 	if err != nil {
@@ -70,6 +75,7 @@ func (s *Stream) MapWithConcurrency(f interface{}, concurrency int) *Stream {
 	}
 	return s.TransformWithConcurrency(op, concurrency)
 }
+*/
 
 // FlatMap similar to Map, however, the user-defined function is expected to return
 // a slice of values (instead of just one mapped value) for downstream operators.

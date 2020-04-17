@@ -22,6 +22,7 @@ func pack(vals ...interface{}) packed {
 type UnaryOperator struct {
 	op          api.UnOperation
 	concurrency int
+	bufferSize  int
 	input       <-chan interface{}
 	output      chan interface{}
 	logf        api.LogFunc
@@ -33,10 +34,9 @@ type UnaryOperator struct {
 func New() *UnaryOperator {
 	// extract logger
 	o := new(UnaryOperator)
-
 	o.concurrency = 1
-	o.output = make(chan interface{}, 1024)
-
+	o.bufferSize = 1024
+	o.output = make(chan interface{}, o.bufferSize)
 	return o
 }
 
@@ -51,6 +51,14 @@ func (o *UnaryOperator) SetConcurrency(concurr int) {
 	if o.concurrency < 1 {
 		o.concurrency = 1
 	}
+}
+
+func (o *UnaryOperator) SetBufferSize(bufferSize int) {
+	if bufferSize < 1 {
+		bufferSize = 1
+	}
+	o.bufferSize = bufferSize
+	o.output = make(chan interface{}, o.bufferSize)
 }
 
 // SetInput sets the input channel for the executor node

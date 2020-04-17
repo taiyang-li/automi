@@ -18,25 +18,28 @@ import (
 // Stream represents a stream unto  which executor nodes can be
 // attached to operate on the streamed data
 type Stream struct {
-	srcParam interface{}
-	snkParam interface{}
-	source   api.Source
-	sink     api.Sink
-	drain    chan error
-	ops      []api.Operator
-	ctx      context.Context
-	logf     api.LogFunc
-	errf     api.ErrorFunc
+	srcParam    interface{}
+	snkParam    interface{}
+	source      api.Source
+	sink        api.Sink
+	drain       chan error
+	ops         []api.Operator
+	ctx         context.Context
+	logf        api.LogFunc
+	errf        api.ErrorFunc
+	concurrency int
+	bufferSize  int
 }
 
 // New creates a new *Stream value
 func New(src interface{}) *Stream {
 	s := &Stream{
-		srcParam: src,
-		ops:      make([]api.Operator, 0),
-		drain:    make(chan error),
+		srcParam:    src,
+		ops:         make([]api.Operator, 0),
+		drain:       make(chan error),
+		concurrency: 1,
+		bufferSize:  1024,
 	}
-
 	return s
 }
 
@@ -58,6 +61,22 @@ func (s *Stream) WithLogFunc(fn api.LogFunc) *Stream {
 // defining an operator function of the form func(data)error.
 func (s *Stream) WithErrorFunc(fn api.ErrorFunc) *Stream {
 	s.errf = fn
+	return s
+}
+
+func (s *Stream) WithConcurrency(concurrency int) *Stream {
+	if concurrency < 1 {
+		concurrency = 1
+	}
+	s.concurrency = concurrency
+	return s
+}
+
+func (s *Stream) WithBufferSize(bufferSize int) *Stream {
+	if bufferSize < 1 {
+		bufferSize = 1
+	}
+	s.bufferSize = bufferSize
 	return s
 }
 
