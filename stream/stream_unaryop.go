@@ -1,6 +1,8 @@
 package stream
 
 import (
+	"fmt"
+
 	"github.com/taiyang-li/automi/api"
 	"github.com/taiyang-li/automi/operators/unary"
 )
@@ -13,6 +15,7 @@ func (s *Stream) Transform(op api.UnOperation) *Stream {
 	operator.SetOperation(op)
 	operator.SetConcurrency(s.concurrency)
 	operator.SetBufferSize(s.bufferSize)
+	fmt.Println("buffersize:", s.bufferSize, "operator output channel size:", cap(operator.GetOutput()))
 	s.ops = append(s.ops, operator)
 	return s
 }
